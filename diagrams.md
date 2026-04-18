@@ -86,9 +86,9 @@ sequenceDiagram
     Department->>PerformanceSubject: RegisterObserver(department)
     
     Note over Program,Department: Неделя 1: Преподаватель разместил успеваемость
-    Program->>PerformanceSubject: TeacherUpdate("ПИН-35", "ПИАПС", 42)
+    Program->>PerformanceSubject: TeacherUpdate("ПИН-31", "ПИАПС", 42)
     activate PerformanceSubject
-    PerformanceSubject->>PerformanceSubject: pInfo.Group = "ПИН-35"
+    PerformanceSubject->>PerformanceSubject: pInfo.Group = "ПИН-31"
     PerformanceSubject->>PerformanceSubject: pInfo.Discipline = "ПИАПС"
     PerformanceSubject->>PerformanceSubject: pInfo.AverageScore = 42
     PerformanceSubject->>PerformanceSubject: pInfo.OnTime = true
@@ -120,9 +120,9 @@ sequenceDiagram
     participant Department as department
     
     Note over Program,Department: Неделя 2: Преподаватель не разместил успеваемость
-    Program->>PerformanceSubject: EndOfWeekNoUpdate("ПИН-35", "ПИАПС")
+    Program->>PerformanceSubject: EndOfWeekNoUpdate("ПИН-31", "ПИАПС")
     activate PerformanceSubject
-    PerformanceSubject->>PerformanceSubject: pInfo.Group = "ПИН-35"
+    PerformanceSubject->>PerformanceSubject: pInfo.Group = "ПИН-31"
     PerformanceSubject->>PerformanceSubject: pInfo.Discipline = "ПИАПС"
     PerformanceSubject->>PerformanceSubject: pInfo.AverageScore = 0
     PerformanceSubject->>PerformanceSubject: pInfo.OnTime = false
